@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta Tags -->
+  <title>Redemption Applications | Mobile App Development Utah</title>
+  <meta name="description" content="Redemption Applications is a Utah-based mobile app development studio. We build Flutter apps for Android and iOS — from idea to launch. Book a free discovery call today.">
+  <meta name="keywords" content="mobile app development, Flutter developer, Android app, iOS app, freelance app developer Utah, custom software development, app development small business, hire app developer Utah">
+  <meta name="author" content="Redemption Applications">
+  <meta name="robots" content="index, follow">
+  <!-- PLACEHOLDER: Update canonical URL if your domain differs -->
+  <link rel="canonical" href="https://www.redemptionapplications.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Redemption Applications | Mobile App Development">
+  <meta property="og:description" content="Custom mobile apps for individuals and small businesses. Flutter specialist. Utah-based, remote-friendly. Book a free discovery call.">
+  <meta property="og:image" content="assets/og-image.png">
+  <!-- PLACEHOLDER: Update og:url if your domain differs -->
+  <meta property="og:url" content="https://www.redemptionapplications.com/">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <!-- PLACEHOLDER: Add a proper favicon file and update the href below -->
+  <link rel="icon" type="image/png" href="assets/RA_Logo_White.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Redemption Applications",
+    "description": "Mobile app and software development studio based in Utah. Flutter specialist for Android and iOS.",
+    "url": "https://www.redemptionapplications.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Utah",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    "serviceArea": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "App Development Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobile App Development"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Flutter Development"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Custom Software Development"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "MVP Development"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google Play Store Deployment"}}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* =============================================
+       CSS Custom Properties
+       ============================================= */
+    :root {
+      --color-bg: #0a1628;
+      --color-surface: #0d1f3c;
+      --color-blue: #4db8d4;
+      --color-blue-dark: #2a8fa8;
+      --color-gold: #b8962e;
+      --color-text: #e8eef4;
+      --color-text-muted: #7a9bb5;
+      --color-white: #ffffff;
+      --color-border: rgba(77, 184, 212, 0.2);
+      --font-display: 'Exo 2', sans-serif;
+      --font-body: 'Source Sans 3', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    /* =============================================
+       Reset & Base
+       ============================================= */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: var(--color-blue);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--color-white);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Focus styles for accessibility */
+    :focus-visible {
+      outline: 2px solid var(--color-blue);
+      outline-offset: 3px;
+    }
+
+    /* =============================================
+       Utility
+       ============================================= */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--color-blue);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 16px;
+    }
+
+    .section-subtitle {
+      font-size: 1.15rem;
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header .section-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: var(--color-gold);
+      margin: 0 auto 20px;
+    }
+
+    /* =============================================
+       Animations
+       ============================================= */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger children */
+    .fade-in.visible:nth-child(2) { transition-delay: 0.1s; }
+    .fade-in.visible:nth-child(3) { transition-delay: 0.2s; }
+    .fade-in.visible:nth-child(4) { transition-delay: 0.3s; }
+    .fade-in.visible:nth-child(5) { transition-delay: 0.4s; }
+    .fade-in.visible:nth-child(6) { transition-delay: 0.5s; }
+
+    /* =============================================
+       Navigation
+       ============================================= */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 16px 0;
+      background: rgba(10, 22, 40, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      transition: background 0.3s ease, padding 0.3s ease;
+    }
+
+    .nav.scrolled {
+      background: rgba(10, 22, 40, 0.98);
+      padding: 10px 0;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--color-white);
+      line-height: 1.15;
+      letter-spacing: 0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text-muted);
+      transition: color 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-blue);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--color-blue);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 10px 24px;
+      border: 2px solid var(--color-blue);
+      border-radius: 6px;
+      color: var(--color-blue);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--color-blue);
+      color: var(--color-white);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--color-text);
+      transition: all 0.3s ease;
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger[aria-expanded="true"] span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile nav */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(10, 22, 40, 0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .mobile-nav.open {
+      display: flex;
+    }
+
+    .mobile-nav a {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .mobile-nav a:hover {
+      color: var(--color-blue);
+    }
+
+    /* =============================================
+       Hero Section
+       ============================================= */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      padding: 120px 24px 80px;
+    }
+
+    /* Subtle CSS grid overlay */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(77, 184, 212, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(77, 184, 212, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      max-width: 800px;
+    }
+
+    /* Corner brackets */
+    .hero-content::before,
+    .hero-content::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border-color: var(--color-blue);
+      border-style: solid;
+      opacity: 0.5;
+    }
+
+    .hero-content::before {
+      top: -30px;
+      left: -30px;
+      border-width: 2px 0 0 2px;
+    }
+
+    .hero-content::after {
+      bottom: -30px;
+      right: -30px;
+      border-width: 0 2px 2px 0;
+    }
+
+    .hero-gold-line {
+      width: 20%;
+      height: 2px;
+      background: var(--color-gold);
+      margin: 0 auto 40px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      color: var(--color-white);
+      line-height: 1.15;
+      margin-bottom: 24px;
+      animation: fadeInUp 0.8s ease forwards;
+      text-align: center;
+    }
+
+    .hero h1 .hero-line {
+      display: block;
+    }
+
+    .hero-sub {
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
+      animation: fadeInUp 0.8s ease 0.2s forwards;
+      opacity: 0;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease 0.4s forwards;
+      opacity: 0;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: var(--color-blue);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid var(--color-blue);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--color-blue-dark);
+      border-color: var(--color-blue-dark);
+      color: var(--color-white);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 32px;
+      background: transparent;
+      color: var(--color-blue);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      border: 2px solid var(--color-blue);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-blue);
+      color: var(--color-white);
+    }
+
+    .hero-dots {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 48px;
+      animation: fadeInUp 0.8s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    .hero-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-blue);
+      opacity: 0.6;
+    }
+
+    .hero-dots span:nth-child(2) {
+      opacity: 1;
+    }
+
+    /* =============================================
+       Services Section
+       ============================================= */
+    .services {
+      background: var(--color-surface);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 36px 28px;
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-blue);
+      box-shadow: 0 8px 30px rgba(77, 184, 212, 0.1);
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    /* =============================================
+       Process / How It Works Section
+       ============================================= */
+    .process-timeline {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      position: relative;
+    }
+
+    .process-step {
+      flex: 1;
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+    }
+
+    /* Connecting gold line */
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 28px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: var(--color-gold);
+      z-index: 0;
+    }
+
+    .step-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      border: 2px solid var(--color-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-blue);
+      margin: 0 auto 20px;
+      background: var(--color-bg);
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 10px;
+    }
+
+    .process-step p {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* =============================================
+       Portfolio Section
+       ============================================= */
+    .portfolio {
+      background: var(--color-surface);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .portfolio-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--color-blue);
+    }
+
+    .portfolio-image {
+      width: 100%;
+      height: 200px;
+      background:
+        radial-gradient(circle at 30% 20%, rgba(77, 184, 212, 0.10), transparent 55%),
+        radial-gradient(circle at 75% 80%, rgba(184, 150, 46, 0.08), transparent 55%),
+        linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%);
+      background-size: 200% 200%, 200% 200%, 100% 100%;
+      animation: portfolioShift 14s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes portfolioShift {
+      0%, 100% { background-position: 0% 0%, 100% 100%, 0 0; }
+      50%      { background-position: 100% 50%, 0% 50%, 0 0; }
+    }
+
+    /* RA bracket motif */
+    .portfolio-image::before,
+    .portfolio-image::after {
+      content: '';
+      position: absolute;
+      width: 44px;
+      height: 64px;
+      border-color: var(--color-blue);
+      border-style: solid;
+      opacity: 0.55;
+    }
+
+    .portfolio-image::before {
+      top: 50%;
+      left: 28px;
+      transform: translateY(-50%);
+      border-width: 2px 0 2px 2px;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+
+    .portfolio-image::after {
+      top: 50%;
+      right: 28px;
+      transform: translateY(-50%);
+      border-width: 2px 2px 2px 0;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .portfolio-image span {
+      position: relative;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--color-text);
+      padding-bottom: 10px;
+      z-index: 1;
+    }
+
+    .portfolio-image span::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 32px;
+      height: 2px;
+      background: var(--color-gold);
+      border-radius: 2px;
+    }
+
+    .portfolio-body {
+      padding: 24px;
+    }
+
+    .portfolio-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 10px;
+    }
+
+    .portfolio-body p {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .portfolio-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .portfolio-tags span {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      background: rgba(77, 184, 212, 0.12);
+      color: var(--color-blue);
+    }
+
+    .portfolio-link {
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text-muted);
+      cursor: default;
+    }
+
+    /* =============================================
+       About Section
+       ============================================= */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 24px;
+    }
+
+    .about-text p {
+      color: var(--color-text);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .about-checklist {
+      list-style: none;
+      margin-top: 28px;
+    }
+
+    .about-checklist li {
+      padding: 6px 0;
+      color: var(--color-text);
+      font-size: 0.95rem;
+    }
+
+    .about-checklist li span {
+      color: var(--color-blue);
+      font-weight: 700;
+      margin-right: 10px;
+    }
+
+    /* RA visual element */
+    .about-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+    }
+
+    .about-logo {
+      width: 240px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* =============================================
+       Contact Section
+       ============================================= */
+    .contact {
+      background: var(--color-surface);
+    }
+
+    .contact-intro {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      max-width: 600px;
+      margin: -40px auto 40px;
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .contact-form {
+      max-width: 640px;
+      margin: 0 auto 60px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      color: var(--color-text);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-blue);
+      outline: none;
+    }
+
+    .form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237a9bb5' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 16px;
+      background: var(--color-blue);
+      color: var(--color-white);
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-submit:hover {
+      background: var(--color-blue-dark);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-blue);
+      border-radius: 12px;
+      max-width: 640px;
+      margin: 0 auto 60px;
+    }
+
+    .form-success .checkmark {
+      font-size: 2rem;
+      color: var(--color-blue);
+      margin-bottom: 16px;
+    }
+
+    .form-success h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--color-white);
+      margin-bottom: 12px;
+    }
+
+    .form-success p {
+      color: var(--color-text-muted);
+    }
+
+    /* Contact alternatives */
+    .contact-alternatives {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .contact-alt-item {
+      text-align: center;
+      padding: 28px 20px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+    }
+
+    .contact-alt-icon {
+      font-size: 1.75rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .contact-alt-item a,
+    .contact-alt-value {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-white);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .contact-alt-label {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    /* =============================================
+       Footer
+       ============================================= */
+    .footer {
+      border-top: 2px solid var(--color-gold);
+      padding: 40px 0;
+      background: var(--color-bg);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand img {
+      height: 32px;
+      width: auto;
+    }
+
+    .footer-brand span {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--color-blue);
+    }
+
+    .footer-tagline {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    /* =============================================
+       Responsive Design
+       ============================================= */
+    @media (max-width: 1024px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-timeline {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .process-timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        right: auto;
+        width: 2px;
+        height: 100%;
+        transform: translateX(-50%);
+      }
+
+      .process-step {
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        padding: 70px 0;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .about-visual {
+        order: -1;
+        padding: 20px 0;
+      }
+
+      .about-logo {
+        width: 180px;
+      }
+
+      .contact-alternatives {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .hero-content::before,
+      .hero-content::after {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================
+       Navigation
+       ============================================ -->
+  <nav class="nav" role="navigation">
+    <div class="container nav-inner">
+      <!-- PLACEHOLDER: Replace RA_Logo_White.png with your actual logo file -->
+      <a href="#home" class="nav-logo" aria-label="Redemption Applications home">
+        <img src="assets/RA_logo.png" alt="Redemption Applications logo">
+        <span class="nav-logo-text">
+          <span>Redemption</span>
+          <span>Applications</span>
+        </span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-cta">Book a Free Discovery Call</a>
+
+      <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+    <a href="#home" class="mobile-nav-link">Home</a>
+    <a href="#services" class="mobile-nav-link">Services</a>
+    <a href="#process" class="mobile-nav-link">Process</a>
+    <a href="#portfolio" class="mobile-nav-link">Portfolio</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <a href="#contact" class="btn-primary" style="margin-top: 16px;">Book a Free Discovery Call</a>
+  </div>
+
+  <!-- ============================================
+       Hero Section
+       ============================================ -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-gold-line"></div>
+      <h1><span class="hero-line">Your Idea</span><span class="hero-line">Expertly Built</span></h1>
+      <p class="hero-sub">Custom mobile apps, website development and software solutions for individuals and growing businesses. From concept to launch — with a team that cares about your success.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Book Your Free Discovery Call</a>
+        <a href="#portfolio" class="btn-secondary">See Our Work</a>
+      </div>
+      <div class="hero-dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Services Section
+       ============================================ -->
+  <section id="services" class="section services">
+    <div class="container">
+      <div class="section-header">
+        <div class="gold-line"></div>
+        <h2 class="section-title">What We Build</h2>
+        <p class="section-subtitle">End-to-end development for the platforms your customers use</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card fade-in">
+          <span class="service-icon" aria-hidden="true">📱</span>
+          <h3>Mobile Apps</h3>
+          <p>Native-quality Android and iOS apps using Flutter. Smooth, fast, and beautiful — shipped to the Google Play Store and Apple App Store.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <span class="service-icon" aria-hidden="true">⚙️</span>
+          <h3>Custom Software</h3>
+          <p>Business tools, internal dashboards, IoT integrations, and workflow automation. Built to your exact specifications.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <span class="service-icon" aria-hidden="true">🔄</span>
+          <h3>App Modernization</h3>
+          <p>Have an existing app that needs updates, redesign, or new features? We take over messy codebases and make them shine.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <span class="service-icon" aria-hidden="true">🚀</span>
+          <h3>MVP Development</h3>
+          <p>Got an idea but need to prove it fast? We scope, build, and ship minimum viable products that are actually viable.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <span class="service-icon" aria-hidden="true">▶️</span>
+          <h3>Play Store Deployment</h3>
+          <p>Full Google Play Store setup, submission, and compliance — including app signing, store listing, and launch support.</p>
+        </div>
+
+        <div class="service-card fade-in">
+          <span class="service-icon" aria-hidden="true">🛡️</span>
+          <h3>Ongoing Support & Maintenance</h3>
+          <p>Post-launch bug fixes, updates, and feature additions. Never be left stranded after your project ships.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Process / How It Works Section
+       ============================================ -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="gold-line"></div>
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">A clear, simple process — no surprises, no pressure</p>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step fade-in">
+          <div class="step-number">1</div>
+          <h3>Book a Discovery Call</h3>
+          <p>Schedule a free consultation. We'll listen to your idea, ask the right questions, and learn what you need — no obligation.</p>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="step-number">2</div>
+          <h3>Receive Your Proposal</h3>
+          <p>You'll get a clear written proposal with scope, timeline, and cost. No vague estimates — just honest, detailed numbers.</p>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="step-number">3</div>
+          <h3>Build & Review Together</h3>
+          <p>We build in phases. You review and give feedback at every milestone, so there are never any surprises.</p>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="step-number">4</div>
+          <h3>Launch Day</h3>
+          <p>Your app goes live. We handle deployment, store submission, and support you through every step of launch.</p>
+        </div>
+
+        <div class="process-step fade-in">
+          <div class="step-number">5</div>
+          <h3>Ongoing Partnership</h3>
+          <p>We don't disappear after launch. Maintenance, updates, and new features are always available as your business grows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Portfolio Section
+       ============================================ -->
+  <section id="portfolio" class="section portfolio">
+    <div class="container">
+      <div class="section-header">
+        <div class="gold-line"></div>
+        <h2 class="section-title">Our Work</h2>
+        <p class="section-subtitle">A growing portfolio of real work — built with care.</p>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- PLACEHOLDER: Replace portfolio cards with real project data and images -->
+        <div class="portfolio-card fade-in">
+          <div class="portfolio-image">
+            <span>Web Design</span>
+          </div>
+          <div class="portfolio-body">
+            <h3>Private Practice Therapist Website</h3>
+            <p>Full website build for a private practice therapist. Six-page WordPress site including service listings, appointment booking integrated with TherapyNotes, a HIPAA-compliant EHR platform for private practice management, intake forms, and insurance and rates information. Also coordinated brand identity with a graphic designer.</p>
+            <div class="portfolio-tags">
+              <span>WordPress</span>
+              <span>Web Design</span>
+              <span>Booking Integration</span>
+              <span>DreamHost</span>
+            </div>
+            <!-- PLACEHOLDER: Add real project link when available -->
+            <span class="portfolio-link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card fade-in">
+          <div class="portfolio-image">
+            <span>Mobile App</span>
+          </div>
+          <div class="portfolio-body">
+            <h3>Hearth — Family Medication Management App</h3>
+            <p>Personal project in active development. A family medication management app built with Flutter. Features include prescription photo scanning to add medications, pharmacy refill reminders, daily pill reminders, multi-family-member profiles, mood and symptom tracking, exportable medication lists for doctor appointments, and a warm, encouraging in-app voice. Designed for real families managing complex medication schedules.</p>
+            <div class="portfolio-tags">
+              <span>Flutter</span>
+              <span>Android</span>
+              <span>In Development</span>
+              <span>Personal Project</span>
+            </div>
+            <!-- PLACEHOLDER: Add real project link when available -->
+            <span class="portfolio-link">View Details →</span>
+          </div>
+        </div>
+
+        <div class="portfolio-card fade-in">
+          <div class="portfolio-image">
+            <span>Game Development</span>
+          </div>
+          <div class="portfolio-body">
+            <h3>Family Video Game Project</h3>
+            <p>A passion project built with my son — a video game in active development. A reminder that great software starts with curiosity, creativity, and building things that bring people joy.</p>
+            <div class="portfolio-tags">
+              <span>Game Development</span>
+              <span>In Development</span>
+              <span>Personal Project</span>
+            </div>
+            <a href="#contact" class="portfolio-link" style="color: var(--color-blue); cursor: pointer;">Let's Talk →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       About Section
+       ============================================ -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="gold-line"></div>
+        <h2 class="section-title">About Redemption Applications</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h3>A Team You Can Trust</h3>
+          <p>Redemption Applications is a Utah-based software development studio run by an experienced development team with six years of professional engineering experience. We've built real software for real businesses — and we bring that same expertise and care to every client project.</p>
+          <p>We specialize in mobile app development using Flutter — delivering smooth, cross-platform apps to Android and iOS. Whether you're an entrepreneur with your first app idea or a growing business that needs custom software, we're with you from the first conversation to launch day and beyond.</p>
+          <p>We believe technology should serve your goals — not the other way around. That means clear communication, honest timelines, and code that's built to last.</p>
+
+          <ul class="about-checklist">
+            <li><span>✓</span> 6 years of professional software engineering experience</li>
+            <li><span>✓</span> Flutter specialist — Android & iOS from one codebase</li>
+            <li><span>✓</span> Google Play Store deployment experience</li>
+            <li><span>✓</span> IoT and hardware integration experience</li>
+            <li><span>✓</span> Available nationwide for remote clients</li>
+            <li><span>✓</span> Fully licensed LLC</li>
+          </ul>
+        </div>
+
+        <div class="about-visual fade-in">
+          <img class="about-logo" src="assets/RA_logo.jpg" alt="Redemption Applications logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Contact Section
+       ============================================ -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="gold-line"></div>
+        <h2 class="section-title">Let's Talk About Your Project</h2>
+        <p class="section-subtitle">Book a free 30-minute discovery call. No pressure, no commitment — just a conversation about what you want to build.</p>
+      </div>
+
+      <p class="contact-intro">Every project is unique. We don't do one-size-fits-all pricing — we learn about your project first, then give you an honest, detailed proposal. The discovery call is always free.</p>
+
+      <!-- Replace REPLACE_WITH_YOUR_ID with your actual Formspree form ID after signing up at formspree.io -->
+      <form class="contact-form" id="contactForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (optional)</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+
+        <div class="form-group">
+          <label for="projectType">Project Type</label>
+          <select id="projectType" name="projectType">
+            <option value="" disabled selected>Select a project type</option>
+            <option value="Mobile App">Mobile App</option>
+            <option value="Custom Software">Custom Software</option>
+            <option value="App Modernization">App Modernization</option>
+            <option value="MVP / Proof of Concept">MVP / Proof of Concept</option>
+            <option value="Ongoing Maintenance">Ongoing Maintenance</option>
+            <option value="Not Sure Yet">Not Sure Yet</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell Us About Your Project</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Describe your idea, what problem it solves, who your users are, and anything else that feels relevant. Don't worry about having all the answers — that's what the discovery call is for!"></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Request My Free Discovery Call</button>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="checkmark">✓</div>
+        <h3>Thank You!</h3>
+        <p>We'll reach out within one business day to schedule your free discovery call.</p>
+      </div>
+
+      <div class="contact-alternatives">
+        <div class="contact-alt-item">
+          <span class="contact-alt-icon" aria-hidden="true">📞</span>
+          <!-- Replace with your Google Voice number -->
+          <a href="tel:(385) 230-7750" class="contact-alt-value">(385) 230-7750</a>
+          <span class="contact-alt-label">Call or text — we respond fast</span>
+        </div>
+
+        <div class="contact-alt-item">
+          <span class="contact-alt-icon" aria-hidden="true">📧</span>
+          <!-- Replace with your real business email once set up -->
+          <a href="mailto:contact@redemptionapplications.com" class="contact-alt-value">contact@redemptionapplications.com</a>
+          <span class="contact-alt-label">Prefer email? We check it daily</span>
+        </div>
+
+        <div class="contact-alt-item">
+          <span class="contact-alt-icon" aria-hidden="true">📍</span>
+          <span class="contact-alt-value">Utah, USA</span>
+          <span class="contact-alt-label">Remote-friendly nationwide</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       Footer
+       ============================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="assets/RA_Logo_White.png" alt="Redemption Applications logo" width="32" height="32">
+        <span>&copy; 2025 Redemption Applications LLC. All rights reserved.</span>
+      </div>
+
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <span class="footer-tagline">Built with care in Utah 🏔️</span>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JavaScript
+       ============================================ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // --- Scroll-based nav styling ---
+      var nav = document.querySelector('.nav');
+      var sections = document.querySelectorAll('.section, .hero');
+      var navLinks = document.querySelectorAll('.nav-links a');
+
+      window.addEventListener('scroll', function() {
+        // Opaque nav on scroll
+        if (window.scrollY > 80) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+
+        // Active section highlighting
+        var scrollPos = window.scrollY + 120;
+        sections.forEach(function(section) {
+          if (section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
+            var id = section.getAttribute('id');
+            navLinks.forEach(function(link) {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+
+      // --- Hamburger menu ---
+      var hamburger = document.querySelector('.hamburger');
+      var mobileNav = document.getElementById('mobileNav');
+      var mobileLinks = mobileNav.querySelectorAll('a');
+
+      hamburger.addEventListener('click', function() {
+        var expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', !expanded);
+        mobileNav.classList.toggle('open');
+        document.body.style.overflow = mobileNav.classList.contains('open') ? 'hidden' : '';
+      });
+
+      mobileLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.setAttribute('aria-expanded', 'false');
+          mobileNav.classList.remove('open');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // --- Scroll-triggered fade-ins (IntersectionObserver) ---
+      var fadeEls = document.querySelectorAll('.fade-in');
+
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.15,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        fadeEls.forEach(function(el) {
+          observer.observe(el);
+        });
+      } else {
+        // Fallback: show all immediately
+        fadeEls.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // --- Contact form submission ---
+      var form = document.getElementById('contactForm');
+      var formSuccess = document.getElementById('formSuccess');
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(response) {
+          if (response.ok) {
+            form.style.display = 'none';
+            formSuccess.style.display = 'block';
+            form.reset();
+          } else {
+            alert('Something went wrong. Please try again or contact us directly.');
+          }
+        }).catch(function() {
+          alert('Something went wrong. Please try again or contact us directly.');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>
