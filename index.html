@@ -675,18 +675,18 @@
         radial-gradient(circle at 30% 20%, rgba(77, 184, 212, 0.10), transparent 55%),
         radial-gradient(circle at 75% 80%, rgba(184, 150, 46, 0.08), transparent 55%),
         linear-gradient(135deg, #0d1f3c 0%, #0a1628 100%);
-      background-size: 200% 200%, 200% 200%, 100% 100%;
       animation: portfolioShift 14s ease-in-out infinite;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
+      will-change: opacity;
     }
 
     @keyframes portfolioShift {
-      0%, 100% { background-position: 0% 0%, 100% 100%, 0 0; }
-      50%      { background-position: 100% 50%, 0% 50%, 0 0; }
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.92; }
     }
 
     /* RA bracket motif */
@@ -913,11 +913,11 @@
     .form-submit {
       width: 100%;
       padding: 16px;
-      background: var(--color-blue);
-      color: var(--color-white);
+      background: #2a8fa8;
+      color: #ffffff;
       font-family: var(--font-body);
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: bold;
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -1157,7 +1157,7 @@
     <div class="container nav-inner">
       <!-- PLACEHOLDER: Replace RA_Logo_White.png with your actual logo file -->
       <a href="#home" class="nav-logo" aria-label="Redemption Applications home">
-        <img src="assets/RA_logo.png" alt="Redemption Applications logo" width="72" height="48" fetchpriority="high">
+        <img src="assets/RA_logo_small.png" alt="Redemption Applications logo" width="72" height="48" fetchpriority="high">
         <span class="nav-logo-text">
           <span>Redemption</span>
           <span>Applications</span>
@@ -1192,6 +1192,8 @@
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <a href="#contact" class="btn-primary" style="margin-top: 16px;">Book a Free Discovery Call</a>
   </div>
+
+  <main>
 
   <!-- ============================================
        Hero Section
@@ -1509,6 +1511,8 @@
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ============================================
        Footer
